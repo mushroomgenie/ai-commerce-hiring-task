@@ -3,6 +3,7 @@ This is a Hiring Task for an AI x Commerce Startup
 - The task is to implement a generic product link fetching tool based on the user's country.
 - The tech stack here is NextJs and I am using Google's Gemini API to fetch the product information.
 - You can find the prompt in `src/page.tsx`
+- The task is deployed [here](https://ai-commerce-hiring-task.vercel.app/)
 
 ## Installing dependencies
 
