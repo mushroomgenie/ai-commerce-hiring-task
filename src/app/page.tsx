@@ -28,7 +28,8 @@ export default function Home() {
         {
           parts: [
             {
-              text: `Fetch links for ${product} in ${country} country. Give the response in below format and sort the prices in ascending order
+              text: `Fetch links for ${product} in ${country} country. 
+              Find the best possible deals, give the response in below format,sort the prices in ascending order,your knowledge cutoff is january 2025 and consider the product is released
               "
               {
                 "link":"",
@@ -54,11 +55,14 @@ export default function Home() {
         body: JSON.stringify(payload),
       }
     );
-    const responseJSON = await response.json()
-    console.log(responseJSON)
-    const finalData = JSON.parse(responseJSON.candidates[0].content.parts[0].text.split("json")[1].replaceAll("```",""))
-    setIsLoading(false)
-    setProductsData(finalData)
+    const responseJSON = await response.json();
+    const finalData = JSON.parse(
+      responseJSON.candidates[0].content.parts[0].text
+        .split("json")[1]
+        .replaceAll("```", "")
+    );
+    setIsLoading(false);
+    setProductsData(finalData);
   };
 
   return (
@@ -67,6 +71,7 @@ export default function Home() {
         <label>Enter Country</label>
         <input
           type="text"
+          className="py-1"
           placeholder="Country"
           value={country || ""}
           onChange={(event) => setCountry(event.target.value)}
@@ -74,6 +79,7 @@ export default function Home() {
         <label>Enter Product</label>
         <input
           type="text"
+          className="py-1"
           placeholder="Product"
           value={product}
           onChange={(event) => setProduct(event.target.value)}

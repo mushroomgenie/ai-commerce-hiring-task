@@ -32,3 +32,12 @@ The task stated that a demo be displayed in the repo. Below are two GIFs demonst
 ![Demo](demo/DemoRecording.gif)
 
 ![Demo1](demo/DemoRecording1.gif)
+
+### Demo for iPhone 16 Pro 
+
+- Gemini Pro by default considered iphone 16 to be unreleased. The prompt was desinged to make it believe that it has been released.
+- The prices are therefore skewed and the links can be broken too.
+
+![Demo2](demo/DemoRecording2.gif)
+
+![Demo3](demo/DemoRecording3.gif)
